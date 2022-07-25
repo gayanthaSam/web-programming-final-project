@@ -1,0 +1,244 @@
+ 
+/*------------------------------------------------Font imports---------------------------------------*/
+ @font-face {
+     font-family: Raleway;
+     src: url(../fonts/Raleway-Light.ttf);
+}
+ @font-face {
+     font-family: Kanit;
+     src: url(../fonts/Kanit-Regular.ttf);
+}
+/*------------------------------------------------css grid-------------------------------------------*/
+ * {
+     box-sizing: border-box;
+}
+ .row::after {
+     content: "";
+     clear: both;
+     display: table;
+}
+ [class*="col-"] {
+     float: left;
+     padding: 15px;
+}
+ @media only screen and (min-width: 600px) {
+    /* For tablets: */
+     .col-s-1 {
+        width: 8.33%;
+    }
+     .col-s-2 {
+        width: 16.66%;
+    }
+     .col-s-3 {
+        width: 25%;
+    }
+     .col-s-4 {
+        width: 33.33%;
+    }
+     .col-s-5 {
+        width: 41.66%;
+    }
+     .col-s-6 {
+        width: 50%;
+    }
+     .col-s-7 {
+        width: 58.33%;
+    }
+     .col-s-8 {
+        width: 66.66%;
+    }
+     .col-s-9 {
+        width: 75%;
+    }
+     .col-s-10 {
+        width: 83.33%;
+    }
+     .col-s-11 {
+        width: 91.66%;
+    }
+     .col-s-12 {
+        width: 100%;
+    }
+}
+ @media only screen and (min-width: 768px) {
+    /* For desktop: */
+     .col-1 {
+        width: 8.33%;
+    }
+     .col-2 {
+        width: 16.66%;
+    }
+     .col-3 {
+        width: 25%;
+    }
+     .col-4 {
+        width: 33.33%;
+    }
+     .col-5 {
+        width: 41.66%;
+    }
+     .col-6 {
+        width: 50%;
+    }
+     .col-7 {
+        width: 58.33%;
+    }
+     .col-8 {
+        width: 66.66%;
+    }
+     .col-9 {
+        width: 75%;
+    }
+     .col-10 {
+        width: 83.33%;
+    }
+     .col-11 {
+        width: 91.66%;
+    }
+     .col-12 {
+        width: 100%;
+    }
+}
+/*------------------------------------------------navigation bar-------------------------------------------*/
+ .navbar {
+     display: block;
+     width: 100%;
+     background-color: rgba(0, 0, 0, 0.5);
+}
+ .navbar ul {
+     text-align: right;
+}
+ .header ul li , .logo{
+     list-style: none;
+     display: inline-block;
+}
+ .header ul li a, .logo {
+     display: block;
+    /*text-transform: uppercase;
+    */
+     text-decoration: none;
+     color: #fff;
+     font-size: 25px;
+     font-family: 'Raleway', sans-serif;
+     letter-spacing: 2px;
+     font-weight: 600;
+     padding: 25px;
+}
+/*------------------------------------------------spider-------------------------------------------*/
+ .spider {
+     position: absolute;
+     display: inline-block;
+     top: 0;
+     left: 30%;
+    /* 4. Animatie */
+     animation: swing 2s infinite;
+     transform-origin: top;
+    /* Bonus */
+     transition: 0.8s ease-in-out;
+}
+ .spider .spiderweb {
+     width: 2px;
+     height: 200px;
+     margin-left: 49px;
+     background: rgba(255, 255, 255, 0.7);
+}
+ .spider .spiderweb_small {
+     width: 2px;
+     height: 110px;
+     margin-left: 49px;
+     background: rgba(255, 255, 255, 0.7);
+}
+ .spider .body {
+     width: 100px;
+     height: 80px;
+     background: #222;
+     position: relative;
+     border-radius: 50%;
+}
+ .spider .body .eye {
+     width: 25px;
+     height: 25px;
+     position: absolute;
+     bottom: 20px;
+     background: #fff;
+     border-radius: 50%;
+}
+ .spider .body .eye.left {
+     left: 20px;
+}
+ .spider .body .eye.right {
+     right: 20px;
+}
+ .spider .body .eye:after {
+     background: #222;
+     width: 7px;
+     height: 7px;
+     content: "";
+     display: block;
+     margin: 55%;
+     border-radius: 50%;
+    /* 3. Animatie */
+     animation: look 4s infinite;
+}
+ .spider .legs .leg {
+     width: 80px;
+     height: 40px;
+     margin-top: -20px;
+     border: 5px solid transparent;
+     border-top-color: #333;
+     border-radius: 40px 40px 0 0;
+}
+ .spider .legs {
+     position: absolute;
+     bottom: -10%;
+     z-index: -1;
+}
+ .spider .legs.left {
+     left: -70%;
+}
+ .spider .legs.right {
+     right: -60%;
+}
+ .legs.left .leg:nth-child(1) {
+     transform: rotate(10deg);
+     margin-left: 10px;
+}
+ .legs.right .leg:nth-child(1) {
+     transform: rotate(-10deg);
+     margin-left: -10px;
+}
+ .legs.left .leg:nth-child(2) {
+     transform: rotate(-20deg);
+     margin-left: 20px;
+}
+ .legs.right .leg:nth-child(2) {
+     transform: rotate(20deg);
+     margin-left: -20px;
+}
+ .legs.left .leg:nth-child(3) {
+     transform: rotate(-50deg);
+     margin-left: 30px;
+}
+ .legs.right .leg:nth-child(3) {
+     transform: rotate(50deg);
+     margin-left: -30px;
+}
+/* 1. Animatie */
+ @keyframes look {
+     0%, 40%, 100% {
+         transform: translateX(0);
+    }
+     45%, 95% {
+         transform: translateX(-110%);
+    }
+}
+/* 3. Animatie */
+ @keyframes swing {
+     0%, 100% {
+         transform: translateY(0);
+    }
+     50% {
+         transform: translateY(-20px);
+    }
+}
+ 

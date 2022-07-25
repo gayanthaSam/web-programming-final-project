@@ -1,0 +1,44 @@
+ .header {
+     background: linear-gradient( to bottom, #98a1a3, #404647 );
+     color: #ffffff;
+     padding: 15px;
+     height: 270px;
+     width: 100%;
+}
+/*------------------------------------------------row formatting-------------------------------------------*/
+ .row-contents {
+     color: #3a3a3d;
+     padding: 15px;
+     background-size: cover;
+     background-position:center;
+     background-repeat:no-repeat;
+     font-family: 'Raleway', sans-serif;
+     letter-spacing: 1px;
+     justify-content: start;
+}
+/*------------------------------------------------lists--------------------------------------------------*/
+ .circle{
+     counter-reset: list-counter;
+     list-style: none;
+     float:left;
+}
+ .circle li{
+     margin: 1.5em 0;
+}
+ .circle li:before{
+     content: counter(list-counter);
+     counter-increment: list-counter;
+     width: 1em;
+     height: 1em;
+     padding: .5em;
+     margin-right: 1em;
+     border-radius: 50%;
+     border: .25em solid #ccc;
+     background: #000;
+     color: #fff;
+     font-family: arial;
+     font-weight: bold;
+     text-align: center;
+     display: inline-block;
+}
+ 
